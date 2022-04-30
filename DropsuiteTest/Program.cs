@@ -3,14 +3,26 @@ using System.IO;
 
 namespace DropsuiteTest
 {
+    /// <summary>
+    /// The main program class, containing the main method.
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// The main method amd application's starting point.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
-            
+            // Get the folder path from the user
+            string folderPath = Program.GetFolderPath();
         }
 
-        private string GetFolderPath()
+        /// <summary>
+        /// Asks the user for a folder path and returns it if it exists.
+        /// </summary>
+        /// <returns>A folder path.</returns>
+        private static string GetFolderPath()
         {
             // Initialize a variable to hold the path the user selects
             string selectedPath = null;
@@ -33,6 +45,7 @@ namespace DropsuiteTest
 
             // If the user entered "q", exit the program
             Environment.Exit(0);
+            return null;
         }
     }
 }
